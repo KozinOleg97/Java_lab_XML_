@@ -8,7 +8,8 @@ import javax.xml.parsers.SAXParserFactory;
 
 public class MySAXHandler extends DefaultHandler {
 
-    private String curQName, name, surname, patronim, XMLPath;
+    private String curQName, XMLPath;
+    private String name = "", surname = "", patronim = "";
     private Integer state = 0, studentsNumb = 0;
 
 

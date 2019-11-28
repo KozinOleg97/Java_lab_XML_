@@ -15,7 +15,7 @@ public class JAXBParser {
         //создаем объект Student с какими-то данными
         Student student = new Student();
         student.setId(1);
-        student.setAge(21);
+        student.setAge(22);
         student.setName("Andrew");
         student.setLanguage("Java");
         student.setPassword("simplepassword");
@@ -27,6 +27,7 @@ public class JAXBParser {
         Student unmarshStudent = fromXmlToObject(fileName);
         if (unmarshStudent != null) {
             System.out.println(unmarshStudent.toString());
+            System.out.println(unmarshStudent.getClass());
         }
     }
 
@@ -34,7 +35,7 @@ public class JAXBParser {
     // восстанавливаем объект из XML файла
     private  Student fromXmlToObject(String filePath) {
         try {
-            // создаем объект JAXBContext - точку входа для JAXB
+            // создаем объект JAXBContext
             JAXBContext jaxbContext = JAXBContext.newInstance(Student.class);
             Unmarshaller un = jaxbContext.createUnmarshaller();
 
