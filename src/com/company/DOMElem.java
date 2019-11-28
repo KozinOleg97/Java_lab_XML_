@@ -81,7 +81,7 @@ public class DOMElem {
     }
 
     private String getRandomName() {
-        Integer Min = 0, Max =listOfNames.size(), rndNum;
+        Integer Min = 1, Max =listOfNames.size(), rndNum;
         rndNum = Min + (int)(Math.random() * ((Max - Min) + 1));
         //Random rndGen = new Random(System.currentTimeMillis());
         //this.rnd = rndGen.nextInt(listOfNames.size());
